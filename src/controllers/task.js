@@ -27,7 +27,6 @@ const getTasks = async (req, res) => {
         return res.status(200).json(response);
     }
     catch(err){
-        console.log(err)
         return errors.internalServer(res);
     }
 };

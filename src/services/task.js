@@ -75,7 +75,6 @@ const deleteTask = (taskId) => new Promise( async (resolve, reject) => {
         const response = await db.Task.destroy({
             where: {taskId}
         });
-        console.log(response)
         resolve({
             err: response ? 0 : 1,
             mes: response ? "Deleted successfully" : "No such that task"
